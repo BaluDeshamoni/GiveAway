@@ -1,0 +1,51 @@
+main {
+  min-height: 80vh;
+}
+
+h1 {
+  font-size: 1.4rem;
+  padding: 0.1rem;
+}
+h2 {
+  padding: 0.1rem;
+}
+h3 {
+  padding: 1rem 0;
+}
+.rating span {
+  margin: 0.1rem;
+}
+
+.carousel {
+  margin-top: 10px;
+  height: 300px;
+  width: '40%';
+}
+
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item-active {
+  display: flex;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 0;
+}
+
+.carousel-caption h2 {
+  color: #fff;
+  font-size: medium;
+}
+
+.carousel img {
+  height: 250px;
+  padding: 30px;
+  margin: 20px;
+  margin-left: 50vh;
+  border-radius: 50%;
+}
+
+.carousel a {
+  margin: 0 auto;
+}
