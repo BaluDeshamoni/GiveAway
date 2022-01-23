@@ -69,6 +69,7 @@ export const updateProduct = asyncHandler(async (req, res) => {
     product.description = req.body.description || product.description
     product.image = req.body.image || product.image
     product.category = req.body.category || product.category
+    product.countInStock = req.body.countInStock || product.countInStock
     product.brand = req.body.brand || product.brand
 
     const updatedProduct = await product.save()
