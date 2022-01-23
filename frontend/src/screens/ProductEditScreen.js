@@ -41,8 +41,8 @@ const ProductEditScreen = ({ match, history }) => {
       history.push('/admin/productlist')
     } else {
       if (!product.name || product._id !== productId) {
-      } else {
         dispatch(productDetailActions(productId))
+      } else {
         setName(product.name)
         setPrice(product.price)
         setBrand(product.brand)
@@ -78,7 +78,7 @@ const ProductEditScreen = ({ match, history }) => {
           'Content-Type': 'multipart/form-data',
         },
       }
-      const { data } = await axios.post('api/upload', formData, config)
+      const { data } = await axios.post('/api/upload', formData, config)
       setImage(data)
       setUploading(false)
     } catch (error) {
@@ -143,9 +143,9 @@ const ProductEditScreen = ({ match, history }) => {
                 onChange={(e) => setImage(e.target.value)}
               ></Form.Control>
               <Form.File
-                custom
                 id='image-file'
                 label='Choose File'
+                custom
                 onChange={uploadFileHandler}
               ></Form.File>
               {uploading && <Loader />}
